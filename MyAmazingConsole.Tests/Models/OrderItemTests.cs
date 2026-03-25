@@ -2,8 +2,15 @@ using MyAmazingConsole.Models;
 
 namespace MyAmazingConsole.Tests.Models;
 
+/// <summary>
+/// Unit tests for the <see cref="OrderItem"/> model.
+/// Verifies the quantity validation logic and the computed <see cref="OrderItem.TotalCost"/> property.
+/// </summary>
 public class OrderItemTests
 {
+    /// <summary>
+    /// Verifies that setting <see cref="OrderItem.Quantity"/> to a positive value succeeds.
+    /// </summary>
     [Fact]
     public void Quantity_WhenSetToPositiveValue_ShouldSucceed()
     {
@@ -11,6 +18,11 @@ public class OrderItemTests
         Assert.Equal(5, item.Quantity);
     }
 
+    /// <summary>
+    /// Verifies that setting <see cref="OrderItem.Quantity"/> to zero or a negative value
+    /// throws an <see cref="ArgumentOutOfRangeException"/>.
+    /// </summary>
+    /// <param name="quantity">The invalid quantity value to test.</param>
     [Theory]
     [InlineData(0)]
     [InlineData(-1)]
@@ -21,6 +33,10 @@ public class OrderItemTests
         Assert.Throws<ArgumentOutOfRangeException>(() => item.Quantity = quantity);
     }
 
+    /// <summary>
+    /// Verifies that <see cref="OrderItem.TotalCost"/> returns the product of
+    /// <see cref="OrderItem.Quantity"/> and <see cref="OrderItem.UnitCost"/>.
+    /// </summary>
     [Fact]
     public void TotalCost_ShouldBeProductOfQuantityAndUnitCost()
     {
