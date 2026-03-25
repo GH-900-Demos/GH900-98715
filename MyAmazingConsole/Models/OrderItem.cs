@@ -30,7 +30,7 @@ public class OrderItem
     /// This guard prevents invalid order data from entering the system.
     /// </summary>
     /// <exception cref="ArgumentOutOfRangeException">
-    /// Thrown when <paramref name="value"/> is less than or equal to zero.
+    /// Thrown when the assigned value is less than or equal to zero.
     /// </exception>
     public int Quantity
     {
