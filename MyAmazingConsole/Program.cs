@@ -1,4 +1,4 @@
-﻿using MyAmazingConsole.Models;
+using MyAmazingConsole.Models;
 using MyAmazingConsole.Repositories;
 
 IOrderRepository repository = new InMemoryOrderRepository();
