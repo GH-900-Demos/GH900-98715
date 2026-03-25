@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="MyAmazingConsole.Tests/MyAmazingConsole.Tests.csproj" />
   <Project Path="MyAmazingConsole/MyAmazingConsole.csproj" />
 </Solution>
