@@ -2,7 +2,7 @@ using MyAmazingConsole.Models;
 using MyAmazingConsole.Repositories;
 
 IOrderRepository repository = new InMemoryOrderRepository();
-
+var mysecret="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";
 // Create first order
 var order1 = new Order
 {
