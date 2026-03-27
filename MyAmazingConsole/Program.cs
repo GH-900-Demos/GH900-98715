@@ -1,6 +1,7 @@
 using MyAmazingConsole.Models;
 using MyAmazingConsole.Repositories;
 
+// Use the interface to abstract the db connection!!!
 IOrderRepository repository = new InMemoryOrderRepository();
 var mysecret="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";
 // Create first order
